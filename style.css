@@ -1,0 +1,77 @@
+* {
+   -moz-box-sizing:    border-box;   /* Firefox 1, probably can drop this */
+   -webkit-box-sizing: border-box;   /* Safari 3-4, also probably droppable */
+    box-sizing:        border-box;   /* Everything else */
+}
+
+.milestone {
+	display: block;
+	position: relative;
+	font-size: 0;
+}
+
+.milestone > * {
+	font-size: medium;
+	font-size: 1rem;
+}
+
+.milestone::after {
+	content: "";
+	display: table;
+	width: 100%;
+}
+
+.line {
+	display: block;
+	background-color: salmon;
+	height: 250px;
+	position: relative;
+	width: 100%;	
+}
+
+.line #ribbon {
+	width: 30px;
+	background-color: #5437CC;
+	height: 100%;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.when {
+	display: block;
+	background-color: aquamarine;
+	text-align: center;
+}
+
+
+.what {
+	display: block;
+	background-color: chartreuse;
+	height: 250px;
+}
+
+@media all and (min-width: 700px) {
+
+	.line {
+		display: inline-block;
+		background-color: salmon;
+		width: 32%;
+		height: 600px;
+	}
+
+	.when {
+		display: inline-block;
+		background-color: aquamarine;
+		width: 32%;
+		height: 600px;
+		/*float: left;*/
+	}
+
+	.what {
+		display: inline-block;
+		background-color: chartreuse;
+		width: 32%;
+		height: 600px;
+	}
+}
