@@ -4,10 +4,17 @@
     box-sizing:        border-box;   /* Everything else */
 }
 
+.timeline {
+	margin: 0 auto;
+}
+
 .milestone {
 	display: block;
 	position: relative;
 	font-size: 0;
+	display: block;
+	background-color: chartreuse;
+	height: 450px;
 }
 
 .milestone > * {
@@ -15,63 +22,104 @@
 	font-size: 1rem;
 }
 
-.milestone::after {
+/*.milestone::after {
 	content: "";
 	display: table;
 	width: 100%;
-}
+}*/
 
-.line {
-	display: block;
-	background-color: salmon;
-	height: 250px;
-	position: relative;
-	width: 100%;	
-}
 
-.line #ribbon {
+.ribbon {
 	width: 30px;
 	background-color: #5437CC;
 	height: 100%;
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
+	border: 5px white solid;
+	border-top: none;
+	border-bottom: none;
+	z-index: 9;
+}
+
+.badge {
+	position: absolute;
+	height: 75px;
+	width:	75px;
+	border-radius: 50%;
+	background-color: #5437CC;
+	border: 5px white solid;
+	left: 50%;
+	transform: translateX(-50%);
+	top: -10%;
+	/*transform: translateY(-20%);*/
+	z-index: 12;
+
 }
 
 .when {
 	display: block;
-	background-color: aquamarine;
+	position: absolute;
+	left: 50%;
+	transform: translatex(-50%);
+	/*background-color: aquamarine;*/
 	text-align: center;
+	top: 43%;
+	z-index: 11;
 }
-
 
 .what {
-	display: block;
-	background-color: chartreuse;
+	background-color: salmon;
+	width: 300px;
 	height: 250px;
+	position: absolute;
+	margin-top: 125px;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 10px;
+	border: 3px solid #eeeeee;
+	z-index: 10;
 }
+
+.left-triangle {
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-top: 15px solid transparent;
+	border-right: 30px solid salmon;
+	border-bottom: 15px solid transparent;
+	top: 10%;
+	left: -10%;
+	/*box-shadow: 0 0 0 3px #eeeeee;*/
+}
+
+
 
 @media all and (min-width: 700px) {
 
 	.line {
 		display: inline-block;
+		position: absolute;
+		left: 20%;
 		background-color: salmon;
-		width: 32%;
-		height: 600px;
+		/*width: 32%;*/
+		height: 100%;
 	}
 
 	.when {
 		display: inline-block;
+		position: absolute;
 		background-color: aquamarine;
-		width: 32%;
+		/*width: 32%;*/
 		height: 600px;
 		/*float: left;*/
 	}
 
 	.what {
 		display: inline-block;
+		position: absolute;
 		background-color: chartreuse;
-		width: 32%;
+		/*width: 32%;*/
 		height: 600px;
 	}
 }
