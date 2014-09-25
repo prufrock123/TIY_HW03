@@ -51,7 +51,7 @@
 	border: 5px white solid;
 	left: 50%;
 	transform: translateX(-50%);
-	top: -10%;
+	top: 22%;
 	/*transform: translateY(-20%);*/
 	z-index: 12;
 
@@ -97,29 +97,36 @@
 
 @media all and (min-width: 700px) {
 
-	.line {
+	.ribbon {
 		display: inline-block;
 		position: absolute;
-		left: 20%;
-		background-color: salmon;
+		left: 24%;
+		background-color: #5437CC;
 		/*width: 32%;*/
 		height: 100%;
+	}
+
+	.badge {
+		top: 31%;
+		left: 24%;
 	}
 
 	.when {
 		display: inline-block;
 		position: absolute;
 		background-color: aquamarine;
+		left: 15%;
+		top: 38%;
 		/*width: 32%;*/
-		height: 600px;
+		/*height: 100%;*/
 		/*float: left;*/
 	}
 
 	.what {
 		display: inline-block;
 		position: absolute;
-		background-color: chartreuse;
+		background-color: salmon;
 		/*width: 32%;*/
-		height: 600px;
+		height: 250px;
 	}
 }
