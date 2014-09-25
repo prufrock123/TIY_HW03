@@ -13,7 +13,7 @@
 	position: relative;
 	font-size: 0;
 	display: block;
-	background-color: chartreuse;
+	background-color: white;
 	height: 450px;
 }
 
@@ -30,13 +30,13 @@
 
 
 .ribbon {
-	width: 30px;
-	background-color: #5437CC;
+	width: 12px;
+	background-color: #AFDCF8;
 	height: 100%;
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
-	border: 5px white solid;
+	/*border: 5px white solid;*/
 	border-top: none;
 	border-bottom: none;
 	z-index: 9;
@@ -47,8 +47,8 @@
 	height: 75px;
 	width:	75px;
 	border-radius: 50%;
-	background-color: #5437CC;
-	border: 5px white solid;
+	background-color: #46A4DA;
+	border: 5px #AFDCF8 solid;
 	left: 50%;
 	transform: translateX(-50%);
 	top: 22%;
@@ -64,21 +64,41 @@
 	transform: translatex(-50%);
 	/*background-color: aquamarine;*/
 	text-align: center;
-	top: 43%;
+	top: 38%;
 	z-index: 11;
 }
 
+.when p {
+	/*display: inline-block;*/
+	margin: auto auto -0.5em;
+	text-align: center;
+	color: #dcdcdc;
+}
+
+.when h2 {
+	color: #f7f7f7;
+}
+
 .what {
-	background-color: salmon;
-	width: 300px;
-	height: 250px;
+	background-color: #6CBFEE;
+	max-width: 575px;
+	height: 100%;
 	position: absolute;
 	margin-top: 125px;
 	left: 50%;
 	transform: translateX(-50%);
 	border-radius: 10px;
-	border: 3px solid #eeeeee;
+	/*border: 3px solid #eeeeee;*/
 	z-index: 10;
+}
+
+.what .content {
+	margin: 60px 40px;
+	display: inline-block;
+}
+
+.what .content p {
+	display: inline-block;
 }
 
 .left-triangle {
@@ -86,22 +106,24 @@
 	width: 0;
 	height: 0;
 	border-top: 15px solid transparent;
-	border-right: 30px solid salmon;
+	border-right: 30px solid #6CBFEE;
 	border-bottom: 15px solid transparent;
 	top: 10%;
-	left: -10%;
+	left: -4%;
 	/*box-shadow: 0 0 0 3px #eeeeee;*/
 }
 
 
 
-@media all and (min-width: 700px) {
+@media all and (min-width: 900px) {
 
 	.ribbon {
+		width: 12px;
+		border: none;
 		display: inline-block;
 		position: absolute;
 		left: 24%;
-		background-color: #5437CC;
+		background-color: #AFDCF8;
 		/*width: 32%;*/
 		height: 100%;
 	}
@@ -114,7 +136,7 @@
 	.when {
 		display: inline-block;
 		position: absolute;
-		background-color: aquamarine;
+		/*background-color: aquamarine;*/
 		left: 15%;
 		top: 38%;
 		/*width: 32%;*/
@@ -122,10 +144,18 @@
 		/*float: left;*/
 	}
 
+	.when p {
+		text-align: right;
+	}
+
+	.when h2 {
+		color: #6CBFEE
+	}
+
 	.what {
 		display: inline-block;
 		position: absolute;
-		background-color: salmon;
+		background-color: #6CBFEE;
 		/*width: 32%;*/
 		height: 250px;
 	}
